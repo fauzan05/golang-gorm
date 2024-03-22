@@ -7,6 +7,7 @@ Package yang harus diinstal :
 - github.com/stretchr/testify
 - github.com/spf13/viper
 - github.com/golang-migrate/migrate
+- github.com/go-playground/validator/v10
 
 -- Migration --
 Cara instal migration : go install -tags 'mysql' github.com/golang-migrate/migrate@latest

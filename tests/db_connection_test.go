@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var db = app.OpenConnection()
+var DB = app.OpenConnection()
 
 func TestOpenConnection(t *testing.T) {
-	assert.NotNil(t, db)
+	assert.NotNil(t, DB)
 	helper.SaveToLogInfo("Koneksi Berhasil")
 }

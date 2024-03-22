@@ -1,2 +1,0 @@
-time="2024-03-22T19:06:21+07:00" level=error msg="Config File \"config\" Not Found in \"[/Users/fauzannurhidayat/Documents/Go-Lang/golang-gorm/tests]\""
-time="2024-03-22T19:07:02+07:00" level=error msg="invalid DSN: missing the slash separating the database name"
