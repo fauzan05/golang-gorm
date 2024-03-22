@@ -1,0 +1,27 @@
+{
+    "app" : {
+        "name" : "golang-gorm",
+        "version" : "1.0.0",
+        "author" : "fauzan nur hidayat"
+    },
+    "database" : {
+        "prod" : {
+            "type" : "mysql",
+            "name" : "golang_gorm",
+            "show_sql" : true,
+            "host" : "localhost",
+            "port" : 3306,
+            "username" : "root",
+            "password" : ""
+        },
+        "test" : {
+            "type" : "mysql",
+            "name" : "golang_gorm",
+            "show_sql" : true,
+            "host" : "localhost",
+            "port" : 3306,
+            "username" : "root",
+            "password" : ""
+        }
+    }
+}
