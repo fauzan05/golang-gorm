@@ -14,8 +14,15 @@ Cara instal migration : go install -tags 'mysql' github.com/golang-migrate/migra
 
 Cara membuat migration : migrate create -ext sql -dir database/migrations create_table_categories
 
-Cara menjalankan migration : migrate -database "mysql://root@tcp(localhost:3306)/golang_restful_api" -path database/migrations up
+Cara menjalankan migration : migrate -database "mysql://root@tcp(localhost:3306)/golang_gorm" -path database/migrations up
 
-Cara remove dirty : migrate -path database/migrations -database "mysql://root@tcp(localhost:3306)/golang_restful_api" force 20240320160949
+Cara remove dirty : migrate -path database/migrations -database "mysql://root@tcp(localhost:3306)/golang_gorm" force 20240320160949
 
-Cara migrate ke versi tertentu (versi 1 misalnya) : migrate -database "mysql://root@tcp(localhost:3306)/golang_restful_api" -path database/migrations up 1
+Cara migrate ke versi tertentu (versi 1 misalnya) : migrate -database "mysql://root@tcp(localhost:3306)/golang_gorm" -path database/migrations up 1
+
+-- GORM --
+Field Permission
+<-:create untuk create only
+<-:update untuk update only
+<- untuk create dan update
+- ignore/tidak bisa di read/write
