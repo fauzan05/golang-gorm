@@ -12,6 +12,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 )
 
 func TestEnum(t *testing.T) {
@@ -198,4 +199,31 @@ func TestQuerySingleInlineCondition(t *testing.T) {
 	result = DB.Where("first_name = ?", "Fauzan").First(&newUser)
 	assert.Nil(t, result.Error)
 	fmt.Println(user)
+}
+
+func TestConflict(t *testing.T) {
+	user := domain.User{
+		ID: 21,
+		Name: domain.Name{
+			FirstName: "Fauzan",
+			MiddleName: "Nur",
+			LastName: "Hidayat",
+		},
+	}
+
+	result := DB.Clauses(clause.OnConflict{
+		UpdateAll: true,
+	}).Create(&user)
+	assert.Nil(t, result.Error) 
+	// jika terjadi konflik, secara otomatis akan update user dengan id 21
+}
+
+func TestDelete(t *testing.T) {
+	var user1 *domain.User
+	result := DB.First(&user1, "id = ?", "90")
+	fmt.Println(&domain.User{})
+	assert.Nil(t, result.Error)
+
+	result = DB.Delete(&domain.User{}, "id = ?", "91")
+	assert.Nil(t, result.Error)
 }
