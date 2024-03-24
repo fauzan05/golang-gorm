@@ -1,0 +1,2 @@
+ALTER TABLE todos DROP CONSTRAINT fk_user;
+ALTER TABLE todos DROP COLUMN user_id;

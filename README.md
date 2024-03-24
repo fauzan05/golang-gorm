@@ -16,9 +16,12 @@ Cara membuat migration :
 - Prod
 migrate create -ext sql -dir database/prod/migrations create_table_users
 migrate create -ext sql -dir database/prod/migrations create_table_todos
+migrate create -ext sql -dir database/prod/migrations create_table_wallets
+
 - Test
 migrate create -ext sql -dir database/test/migrations create_table_users
 migrate create -ext sql -dir database/test/migrations create_table_todos
+migrate create -ext sql -dir database/test/migrations create_table_wallets
 
 Cara menjalankan migration :
 - Prod

@@ -16,7 +16,7 @@
         },
         "test" : {
             "type" : "mysql",
-            "name" : "golang_gorm",
+            "name" : "golang_gorm_test",
             "show_sql" : true,
             "host" : "localhost",
             "port" : 3306,

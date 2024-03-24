@@ -6,3 +6,5 @@ time="2024-03-22T20:41:09+07:00" level=info msg=1
 time="2024-03-22T20:41:09+07:00" level=info msg=1
 time="2024-03-22T20:41:09+07:00" level=info msg=1
 time="2024-03-23T04:43:43+07:00" level=error msg="Error 1062 (23000): Duplicate entry '1' for key 'PRIMARY'"
+time="2024-03-23T23:52:36+07:00" level=error msg="Config File \"config\" Not Found in \"[/Users/fauzannurhidayat/Documents/Go-Lang/golang-gorm/tests]\""
+time="2024-03-24T01:18:08+07:00" level=error msg="sql: expected 2 arguments, got 1"

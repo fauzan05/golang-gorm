@@ -42,7 +42,7 @@ func GetDatabaseConfigProd() DatabaseConfig {
 func GetDatabaseConfigTest() DatabaseConfig {
 	config.SetConfigName("config")
 	config.SetConfigType("json")
-	config.AddConfigPath(".")
+	config.AddConfigPath("..")
 
 	// membaca config
 	err := config.ReadInConfig()
