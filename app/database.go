@@ -27,7 +27,13 @@ func OpenConnection(log *logrus.Logger) *gorm.DB {
     })
     helper.HandleErrorWithPanic(err)
 	// db.Logger = logger.Default.LogMode(logger.Info) // jika ingin log di terminal
-    return db
+    // Database Pool
+	sqlDB, err := db.DB()
+	helper.HandleErrorWithPanic(err)
+	sqlDB.SetMaxIdleConns(db_conf.Pool.Idle)
+	sqlDB.SetMaxOpenConns(db_conf.Pool.Max)
+	sqlDB.SetConnMaxLifetime(time.Duration(db_conf.Pool.Lifetime))
+	return db
 }
 
 type logrusWriter struct {

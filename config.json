@@ -12,7 +12,12 @@
             "host" : "localhost",
             "port" : 3306,
             "username" : "root",
-            "password" : ""
+            "password" : "",
+            "pool" : {
+                "idle" : 10,
+                "max" : 100,
+                "lifetime" : 300
+            }
         },
         "test" : {
             "type" : "mysql",
@@ -21,7 +26,12 @@
             "host" : "localhost",
             "port" : 3306,
             "username" : "root",
-            "password" : ""
+            "password" : "",
+            "pool" : {
+                "idle" : 10,
+                "max" : 100,
+                "lifetime" : 300
+            }
         }
     }
 }
