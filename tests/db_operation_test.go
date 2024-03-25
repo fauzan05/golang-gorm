@@ -538,7 +538,7 @@ func TestJoinQuery(t *testing.T) {
 	users = []domain.User{}
 	err = DB.Joins("Wallet").Find(&users).Error // left join defaultnya
 	assert.Nil(t, err)
-	assert.Equal(t, 1, len(users))
+	assert.Equal(t, 100, len(users))
 }
 
 type AggregationResult struct {
