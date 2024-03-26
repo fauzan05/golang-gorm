@@ -14,10 +14,11 @@ Cara instal migration : go install -tags 'mysql' github.com/golang-migrate/migra
 
 Cara membuat migration : 
 - Prod
-  
+```  
 migrate create -ext sql -dir database/prod/migrations create_table_users
 migrate create -ext sql -dir database/prod/migrations create_table_todos
 migrate create -ext sql -dir database/prod/migrations create_table_wallets
+```
 
 - Test
   
